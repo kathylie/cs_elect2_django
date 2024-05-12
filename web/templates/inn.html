@@ -1,0 +1,291 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('1.jpg');
+      height: 100vh;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      color: white;
+    }
+
+    header {
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+    }
+
+    nav li {
+      margin: 0 30px; 
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background-color: transparent;
+      text-shadow: 1px 1px 2px #131112; 
+      font-family: 'Verdana', sans-serif;
+      text-transform: capitalize; 
+      font-size: 18px; 
+    }
+
+    nav a:hover {
+      color: #809fb8;
+    }
+
+    .active {
+      color: #90a08d; 
+    }
+
+    .gallery-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .gallery-header h1 {
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .gallery-header p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-item {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 250px; 
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item h2 {
+      color: #444;
+      margin-top: 10px; 
+      text-align: center;
+      font-size: 16px; 
+      position: absolute; 
+      top: 10px; 
+      left: 50%; 
+      transform: translateX(-50%); 
+    }
+
+    .gallery-item p {
+      color: #666;
+      text-align: center;
+      font-size: 10px; 
+     
+
+    }
+
+    .gallery-item .details {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .book-now-button {
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+      text-align: center;
+    }
+
+    .book-now-button a {
+      text-decoration: none;
+      color: #fff;
+      background-color: #007bff;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .book-now-button a:hover {
+      background-color: #0056b3;
+    }
+
+    .info-button {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      text-align: center;
+    }
+
+    .info-button button {
+      text-decoration: none;
+      color: #fff;
+      background-color: #db3838; 
+      padding: 5px 10px;
+      border-radius: 5px;
+      border: none;
+    }
+
+    .info-button button:hover {
+      background-color: #db3838; 
+    }
+
+    .info-icon {
+      margin-right: 5px;
+    }
+
+   
+    .peso-icon {
+      font-size: 10px; 
+      margin-right: 5px;
+    }
+
+    .price {
+      color: #4CAF50;
+    }
+
+    .LOC {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 14px;
+      text-align: center;
+    }
+
+    
+    .LOC {
+      color: black;
+    }
+
+    .social-media-icons {
+      font-size: 20px; 
+      margin-right: 10px; 
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Flights.html">Flights</a></li>
+        <li><a href="INN.html" class="active">INN</a></li>
+        <li><a href="Tours.html">Tours</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="gallery-header">
+      <h1>BEA'S GARDEN IN</h1>
+      <p>Step into a world of comfort and luxury with our seamless hotel booking service. Your dream getaway is just a click away.</p>
+    </div>
+  </header>
+
+  <div class="gallery-container">
+    <div class="gallery-item">
+      <img src="{% static 'images/0.jpg' %}" alt="Gallery Image 1">
+      <h2>Family Standard Room</h2>
+      <p>Spacious and comfortable accommodation for families or larger groups, offering convenience and amenities tailored to their needs.
+      </p>
+      <div class="details">
+      
+        <p><i class="fas fa-users"></i> Capacity: Family <br> <i 
+         class="fas fa-money-bill-alt peso-icon"></i> Price: <span class="price">Php3000</span></p>
+        <div class="book-now-button"><a href="#">Book Now</a></div>
+        <div class="info-button"><a href="details.html"><button><i class="fas fa-info info-icon"></i>INFO</button></a></div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{% static 'images/00.jpg' %}" alt="Gallery Image 2">
+      <h2>Quad Standard Room</h2>
+      <p>Ample space and comfort with accommodations for up to four guests, perfect for families or small groups traveling together.</p>
+      <div class="details">
+        
+        <p><i class="fas fa-users"></i> Capacity: Four Person <br> <i 
+        class="fas fa-money-bill-alt peso-icon"></i> Price: <span class="price">Php2400</span></p>
+        <div class="book-now-button"><a href="#">Book Now</a></div>
+        <div class="info-button"><a href="details.html"><button><i class="fas fa-info info-icon"></i>INFO</button></a></div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{% static 'images/000.jpg' %}" alt="Gallery Image 3">
+      <h2>Triple Standard Room</h2>
+      <p>Offers comfortable lodging for up to three guests, providing convenience and affordability for small families or groups of friends traveling together.</p>
+      <div class="details">
+        
+        <p><i class="fas fa-users"></i> Capacity: Three Person <br>
+        <i class="fas fa-money-bill-alt peso-icon"></i> Price: <span class="price">Php1800</span></p>
+        <div class="book-now-button"><a href="#">Book Now</a></div>
+        <div class="info-button"><a href="details.html"><button><i class="fas fa-info info-icon"></i>INFO</button></a></div>
+      </div>
+    </div>
+    <div class="gallery-item">
+      <img src="{% static 'images/01.jpg' %}" alt="Gallery Image 4">
+      <h2>Double Standard Room</h2>
+      <p>Cozy accommodation with a double bed, ideal for couples or individual travelers seeking comfort and convenience during their stay.</p>
+      <div class="details">
+        
+        <p><i class="fas fa-users"></i> Capacity: Two Person <br> <i 
+        class="fas fa-money-bill-alt peso-icon"></i> Price: <span class="price">Php1200</span></p>
+        <div class="book-now-button"><a href="#">Book Now</a></div>
+        <div class="info-button"><a href="details.html"><button><i class="fas fa-info info-icon"></i>INFO</button></a></div>
+      </div>
+    </div>
+  </div>
+  <p class="LOC">Located at: 14F Ponce De Leon, Brgy. San Pedro Puerto Princesa City, Palawan Philippines 5300<br>
+    <a href="https://www.facebook.com/profile.php?id=100089930534862" class="social-media-icons"><i class="fab fa-facebook-square"></i></a>
+    <i id="email-icon" class="fas fa-envelope social-media-icons"></i>
+    <i id="phone-icon" class="fas fa-phone social-media-icons"></i>
+  </p>
+
+  <script>
+  
+    const phoneIcon = document.getElementById('phone-icon');
+    phoneIcon.addEventListener('click', () => {
+      const phoneNumber = '09770914041'; 
+      alert('Phone number: ' + phoneNumber);
+    });
+
+    const emailIcon = document.getElementById('email-icon');
+
+    
+    emailIcon.addEventListener('click', () => {
+      const emailAddress = 'BeasInn@gmail.com'; 
+      alert('Email address: ' + emailAddress);
+    });
+  </script>
+</body>
+</html>

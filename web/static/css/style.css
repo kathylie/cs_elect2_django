@@ -1,0 +1,135 @@
+@font-face {
+    font-family: fontsy;
+    src: url(Koulen-Regular.ttf);
+}
+
+@font-face {
+
+    font-family: montsy;
+    src: url(Montserrat-Regular.ttf);
+}
+
+@font-face {
+
+    font-family: outsy;
+    src: url(Outfit-Regular.ttf);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: outsy;
+}
+
+.bglow{
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/islabg.jpg);
+    background-repeat: no-repeat;
+    opacity: .5;    
+    /* background-position: -606px -334px; */
+    background-size: cover;
+    filter: blur(3px);
+    
+}
+
+
+.navbar {
+    position: absolute;
+
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+    justify-content: center;
+
+}
+
+.navbar a {
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    margin-left: 40px;
+    text-shadow: 0px 4px 6px #00000050;
+    padding: 8px;
+}
+
+.navbar a:hover{
+    font-size: 25px;
+    border-radius: 60px;
+    border: 2px solid;
+    border-color: #ffffff49;
+    color: #ffffff;
+    transition: all 0.6 ease;
+}
+
+
+.title-con{
+    position: absolute;
+    top: 43%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    width: 1140px;
+    height: 300px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1; /* Ensure the content div is on top of the background div */
+    
+    
+}
+
+.subtitle{
+    position: fixed;
+    padding-top: 55px;
+    padding-left: 21px;
+    font-family: fontsy;
+    
+    font-size: 54px;
+    color: white; 
+    text-align: left;
+    z-index: 2;
+
+}
+
+.maintitle{
+    position: relative;
+    font-size: 128px; 
+    font-family: fontsy;
+    color: #1E90FF; 
+    text-align: center;
+    top: 70px;
+    text-shadow: 2px 6px 0px #ffffff;
+    
+      
+}
+
+
+.home-btn{
+    margin: 10px;
+    align-items: center;
+}
+
+.home-btn a{
+    text-align: center;
+    top: 15px;
+    margin: 10px;
+    position: relative;
+    border-radius: 60px;
+
+    font-family: montsy;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid;
+    border-color: #1E90FF;
+    background: #ffffff2f;
+    color:#1E90FF;;
+}
+
+.home-btn a:hover{
+    border: none;
+    color: #ffffff;
+    background-color: #4486c7;
+}
+
+

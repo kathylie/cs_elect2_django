@@ -1,0 +1,259 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> 
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background-image: url('1.jpg');
+      height: 600px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      color: rgb(230, 226, 226);
+    }
+
+    header {
+      background-color: transparent;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+    }
+
+    nav li {
+      margin: 0 30px; 
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      background-color: transparent;
+      text-shadow: 1px 1px 2px #131112; 
+      font-family: 'Verdana', sans-serif;
+      text-transform: capitalize; 
+      font-size: 18px; 
+    }
+
+    nav a:hover {
+      color: #90a08d; 
+    }
+
+    
+    .active {
+      color: #809fb8; 
+    }
+    .container {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.7); 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+      padding: 10px 20px; 
+      margin: 20px auto; 
+      display: block; 
+      border-radius: 5px; 
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+      position: center; 
+      max-width: 1000px; 
+      padding: 20px;
+      color: black; 
+      background-color: white ;
+      font-size: 14px;
+    }
+
+    .tour-container {
+  display: grid;
+  grid-template-columns: repeat(3, 5fr); 
+  grid-gap: 20px;
+  width: calc(100% - 20px); 
+  height: auto; 
+}
+
+
+
+    .tour {
+      border: none; 
+      background-color: white; 
+      box-shadow: none; 
+      padding: 20px;
+      border-radius: 5px; 
+      font-size: 12px; 
+    }
+
+    .tour p {
+      color: #333; 
+      margin-bottom: 10px; 
+    }
+
+    .tour .details {
+      font-size: 10px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    .tour .description-title {
+      font-weight: bold;
+    }
+
+    .search-bar {
+      text-align: center;
+      margin: 20px auto 0; 
+      position: relative;
+      width: 40%;
+      top: 0; 
+    }
+
+    .search-bar input[type="text"] {
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      width: calc(100% - 40px);
+      text-align: center;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      font-family: 'Roboto', sans-serif;
+      font-size: 10px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: rgb(27, 25, 25);
+    }
+
+    .icons {
+      font-size: 13px;
+      margin-right: 5px;
+    }
+    .price-icon {
+  color: green ;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Flights.html" class="active">Flights</a></li>
+        <li><a href="INN.html">INN</a></li>
+        <li><a href="Tours.html" >Tours</a></li>
+        <li><a href="aboutus.html" >About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        
+      </ul>
+    </nav>
+  </header>
+
+  <div class="search-bar">
+    <div class="search-icon" onclick="search()">
+      <i class="icons fas fa-search"></i>
+    </div>
+    <input type="text" id="searchInput" placeholder="Search your next journey...">
+  </div>
+
+  <div class="container">
+    <h1><i class="fas fa-map"></i> DESTINATION</h1>
+    
+
+    <div class="tour-container">
+      <div class="tour">
+        <p><span class="description-title"><i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"></i> Price: $100 </p>
+        <p> <i class="icons far fa-calendar" style="color: rgb(38, 0, 255)"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i>Time: 3:30AM </p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+
+      <div class="tour">
+        <p><span class="description-title"> <i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"> </i> Price: $150 </p>
+        <p><i class="icons far fa-calendar" style="color: rgb(38, 0, 255);"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i> Time: 3:30AM</p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+
+      <div class="tour">
+        <p><span class="description-title"> <i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"></i> Price: $120 </p>
+        <p> <i class="icons far fa-calendar" style="color: rgb(38, 0, 255);"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i>Time: 3:30AM</p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+
+      <div class="tour">
+        <p><span class="description-title"> <i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"></i> Price: $200 </p>
+        <p> <i class="icons far fa-calendar" style="color: rgb(38, 0, 255);"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i>Time: 3:30AM </p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+
+      <div class="tour">
+        <p><span class="description-title"> <i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"></i> Price: $180 </p>
+        <p> <i class="icons far fa-calendar" style="color: rgb(38, 0, 255);"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i> Time: 3:30AM</p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+
+      <div class="tour">
+        <p><span class="description-title"> <i class="icons fas fa-plane airplane-icon"></i>Puerto to Manila</span></p>
+        <p class="details"><i class="fas fa-plane" style="color: rgb(255, 0, 0);"></i> Air Asia Airplane </p>
+        <p> <i class="icons fas fa-dollar-sign price-icon"></i> Price: $250 </p>
+        <p> <i class="icons far fa-calendar" style="color: rgb(38, 0, 255);"></i> Date: January 1, 2025</p>
+        <p> <i class="icons far fa-clock time-icon"></i>Time: 3:30AM </p>
+        <p><span class="description-title">Fly safe!</span></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function search() {
+      var input, filter, tours, tour, txtValue;
+      input = document.getElementById('searchInput');
+      filter = input.value.toUpperCase();
+      tours = document.getElementsByClassName('tour');
+
+      for (var i = 0; i < tours.length; i++) {
+        tour = tours[i];
+        txtValue = tour.textContent || tour.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          tour.style.display = "";
+        } else {
+          tour.style.display = "none";
+        }
+      }
+    }
+  </script>
+</body>
+</html>

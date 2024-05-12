@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block style %}
+.home-btn{
+    margin: 30px;
+    align-items: center;
+}
+
+.home-btn a{
+    text-align: center;
+    top: 15px;
+    margin: 10px;
+    position: relative;
+    border-radius: 60px;
+
+    font-family: montsy;
+    text-decoration: none;
+    padding: 5px;
+    border: 2px solid;
+    border-color: #1E90FF;
+    background: #ffffff2f;
+    color:#1E90FF;;
+}
+
+.home-btn a:hover{
+    border: none;
+    color: #ffffff;
+    background-color: #4486c7;
+}
+
+{% endblock style %}
+
+
+
+{% block content %}
+    <div class="title-con">
+        <p class="subtitle">LET'S HOP ON AN ADVENTURE WITH</p>
+        <p class="maintitle">APVIL TRAVEL AND TOURS</p>
+        <div class="home-btn">
+            <!-- <input type="search" class="search-inp" placeholder="Search your next joureny..."> -->
+            <a class="btn-hm" href="">Book Now</a>
+            <a class="btn-hm" href="">About Us</a>
+        </div>
+    </div>
+{% endblock content %}
